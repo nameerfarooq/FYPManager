@@ -162,7 +162,7 @@
 
 .PC-btn2 {
     width: 200px;
-    min-width: 140px;
+    min-width: 120px;
     margin: 10px;
     background-color: #05037C;
 }
@@ -220,4 +220,83 @@ color: #05037C;
     font-weight: bolder;
     text-align: center;
     margin: 2%;
+}
+
+
+
+/* ***************************************************************************** */
+/* Final Project Screen */
+/* ***************************************************************************** */
+
+
+
+ .MainContainerFP{
+    padding: 3%;
+ }
+ .FP-Card{
+    margin: 2%;
+    background-color: #dfdfdf;
+    border: none;
+    border-radius: 10px;
+
+ }
+ .FP-1{
+    padding: 2%;
+    background-color: white;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+    margin: 0;
+
+}
+.FP-2{
+    margin: 0;
+     padding:2%;
+     border-bottom-left-radius: 8px ;
+    border-bottom-right-radius: 8px;
+
+ }
+ .GradesHolderFP{
+    padding: 3%;
+    margin: 2%;
+    background-color: #dfdfdf;
+    border: none;
+    border-radius: 10px;
+ }
+ .HeightInput{
+    height: 100px !important;
+
+}
+.widthControl{
+    width: 25% !important;
+    
+    /* margin: 0 2%; */
+}
+.widthControl2{
+    width: 35% !important;
+    
+    /* margin: 0 2%; */
+}
+@media screen and (max-width: 480px) {
+    .widthControl {
+        width: 100% !important;
+    }
+    ۔widthControl2{
+        width: 100% !important;
+
+    }
+}
+
+
+/* ************************************************************************** */
+/* edit members screen */
+/* ************************************************************************** */
+
+
+.Icons-EM{
+    width: 25px;
+}
+.Icon-btn-EM{
+    border: none;
+    margin: 0 2px;
+    background-color: transparent;
 }

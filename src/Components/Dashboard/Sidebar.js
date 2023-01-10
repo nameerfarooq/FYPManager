@@ -11,7 +11,7 @@ const Sidebar = () => {
         <li>Projects</li>
         <li>Milestones</li>
         <li>Notifications</li>
-        <li>Backlogs</li>
+        
         <li>Supervisors</li>
       </ul>
     </aside>

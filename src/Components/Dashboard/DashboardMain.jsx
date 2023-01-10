@@ -1,33 +1,73 @@
 import React from 'react'
+// eslint-disable-next-line
+import AllMilestones from '../Milestone/AllMilestones'
+// eslint-disable-next-line
 import CreateMilestone from '../Milestone/CreateMilestone'
+// eslint-disable-next-line
+import AllNotifications from '../Notifications/AllNotifications'
+import CreateNotification from '../Notifications/CreateNotification'
+// eslint-disable-next-line
+import ChangeSupervisor from '../Project/ChangeSupervisor'
 // import { ListGroup } from 'react-bootstrap'
 // eslint-disable-next-line
 import CreateProject from '../Project/CreateProject'
 // eslint-disable-next-line
+import EditTeamMembers from '../Project/EditTeamMembers'
+// eslint-disable-next-line
+import FinalProject from '../Project/FinalProject'
+// eslint-disable-next-line
 import MainProjectScreen from '../Project/MainProjectScreen'
+// eslint-disable-next-line
 import ViewProject from '../Project/ViewProject'
-import FinalGrades from '../Supervisor/FinalGrades'
-// import TeamMemberWindow from '../TeamMembers/TeamMemberWindow'
+import AddSupervisor from '../Supervisor/AddSupervisor'
+import AllSupervisors from '../Supervisor/AllSupervisors'
+// eslint-disable-next-line
+import TeamMemberWindow from '../TeamMembers/TeamMemberWindow'
 import './style.css'
 function DashboardMain() {
     return (
         <div className='DashboardMain'>
-            
-           {/* Main Screen for projects (view and create new)  */}
-            {/* <MainProjectScreen /> */}
-            
-            {/* create project screen */}
+
+            {/* **************************************************************************************** */}
+            {/* Main Screen for projects (view and create new)  */}
+            {/* **************************************************************************************** */}
+            {/* <MainProjectScreen />   */}
+
             {/* <CreateProject/> */}
-            
-            {/* view project screen */}
+
             {/* <ViewProject/> */}
-            {/* <FinalGrades m1={'nameer'} projectGrade={45} m1g={80} m2={'Ushna'} m2g={80} m3={'Usama1'} m3g={80} /> */}
+
+            {/* <FinalProject/> */}
+
+            {/* <ChangeSupervisor /> */}
 
 
-{/* create milestone window */}
-            <CreateMilestone/>
-            {/* <TeamMemberWindow /> */}
-            
+            {/* ********************************************************************************************* */}
+            {/* create milestone window */}
+            {/* ********************************************************************************************* */}
+
+
+
+
+            {/* ********************************************************************************************* */}
+            {/* create milestone window */}
+            {/* ********************************************************************************************* */}
+
+            {/* <AllMilestones/> */}
+
+            {/* <CreateMilestone/> */}
+
+        {/* <EditTeamMembers/> */}
+
+{/* <AllNotifications/> */}
+
+{/* <CreateNotification/> */}
+
+
+{/* <AllSupervisors/> */}
+
+{/* <AddSupervisor/> */}
+
         </div>
     )
 }

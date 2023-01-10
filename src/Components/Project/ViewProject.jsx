@@ -9,13 +9,13 @@ function ViewProject() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
-    const [show1, setShow1] = useState(false);
-    const handleClose1 = () => setShow1(false);
-    const handleShow1 = () => setShow1(true);
+    // const [show1, setShow1] = useState(false);
+    // const handleClose1 = () => setShow1(false);
+    // const handleShow1 = () => setShow1(true);
     
-    const [show2, setShow2] = useState(false);
-    const handleClose2 = () => setShow2(false);
-    const handleShow2 = () => setShow2(true);
+    // const [show2, setShow2] = useState(false);
+    // const handleClose2 = () => setShow2(false);
+    // const handleShow2 = () => setShow2(true);
 
 
     return (
@@ -36,8 +36,9 @@ function ViewProject() {
                         Documents
                     </h3>
                     <div className='PV-cards-section'>
+                       <p>
                         Click on the button to view the documents
-                        <br />
+                        </p>
                     </div>
                     <Button className='PV-btn'variant="primary" onClick={() => handleShow(true)}>
                         View
@@ -57,11 +58,12 @@ function ViewProject() {
                 <div className='PV-Cards'>
 
                     <h3 className='PV-cards-heading'>
-                        Live Project
+                        Final Project
                     </h3>
                     <div className='PV-cards-section'>
+                        <p>
                         Click on the button to view the Live Project
-                        <br />
+                        </p>
                     </div>
                     <Button className='PV-btn'variant="primary">
                         View
@@ -75,23 +77,16 @@ function ViewProject() {
                         Supervisor
                     </h3>
                     <div className='PV-cards-section'>
-                        Click on the button to view the Supervisor
-                        <br />
+                    <p>
+                    Miss Amna Umair (faculty code)
+                    </p>
+                      <br />
+                      <br />
                     </div>
-                    <Button className='PV-btn' variant="primary" onClick={() => handleShow1(true)}>
-                        View
+                    <Button className='PV-btn' variant="primary">
+                        Change
                     </Button>
-                    <MyVerticallyCenteredModal
-                        details={
-                            {
-                                Head: 'Supervisor',
-
-                                Desc: 'Miss Amna Umair'
-                            }
-                        }
-                        show={show1}
-                        onHide={() => handleClose1(false)}
-                    />
+                    
                 </div>
                 <div className='PV-Cards'>
 
@@ -99,23 +94,17 @@ function ViewProject() {
                         Team Members
                     </h3>
                     <div className='PV-cards-section'>
-                        Click on the button to view the Team Members
-                        <br />
+                        <ul>
+                            <li>Muhammad Nameer (19b-071-cs)</li>
+                            <li>Ushna Karim (19b-019-cs)</li>
+                            <li>Usama Ali (19b-047-cs)</li>
+                        </ul>
+                        
                     </div>
-                    <Button className='PV-btn'variant="primary" onClick={() => handleShow2(true)}>
-                        View
+                    <Button className='PV-btn'variant="primary" >
+                        Edit
                     </Button>
-                    <MyVerticallyCenteredModal
-                        details={
-                            {
-                                Head: 'Team Members',
-
-                                Desc: 'Muhammad Nameer (19b-017-cs), Ushna Karim (19b-019-cs), Usama Ali (19b-047-cs)'
-                            }
-                        }
-                        show={show2}
-                        onHide={() => handleClose2(false)}
-                    />
+                   
                 </div>
 
             </div>
