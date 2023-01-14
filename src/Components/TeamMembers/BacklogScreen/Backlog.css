@@ -135,3 +135,19 @@
     background-color: #05037C;
     color: white;
 }
+.backlogtasktitle{
+    font-weight: bold;
+}
+.backlogtasktitle2{
+margin: 3px;
+}
+.backlogtasktitle3{
+    /* margin: 0; */
+    background-color: white;
+    font-weight: bold;
+    color: grey;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+
+}

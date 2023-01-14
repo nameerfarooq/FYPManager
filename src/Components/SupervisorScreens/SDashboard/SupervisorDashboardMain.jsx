@@ -11,6 +11,7 @@ import SCreateNotification from '../SNotifications/SCreateNotification'
 import STeamMemberCard from '../SProject/STeamMemberCard'
 import SViewTeamMember from '../SProject/SViewTeamMember'
 import SBacklog from '../SBacklogScreen/SBacklog'
+import CreateSprint from '../Sprints/CreateSprint'
 function SupervisorDashboardMain() {
   return (
     <div className='DashboardMain'>
@@ -20,10 +21,11 @@ function SupervisorDashboardMain() {
       {/* <SEditTeamMembers/> */}
       {/* <SAllMilestones/> */}
       {/* <Allsprints/> */}
+      <CreateSprint/>
       {/* <SAllNotifications/> */}
       {/* <SCreateNotification/> */}
       {/* <SViewTeamMember/> */}
-      <SBacklog />
+      {/* <SBacklog /> */}
 
 
 

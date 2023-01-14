@@ -1,5 +1,6 @@
 import React from 'react'
 import './SBacklog.css'
+import SBTask from './SBTask'
 function SBacklog() {
     return (
         <div className='MainDiv'>
@@ -16,24 +17,11 @@ function SBacklog() {
                         Todo
                     </h3>
                     <div className='BacklogStream'>
-                        <div className="backlogTasks Yellow">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>In Progress</button>
-                        </div>
-                        <div className="backlogTasks Yellow">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>In Progress</button>
-                        </div>
-                        <div className="backlogTasks Yellow" >
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask '>In Progress</button>
-                        </div>
+                        <SBTask details={["Documentation","Ushna Karim","Yellow"]}/>
+                        <SBTask details={["Database","Usama Ali","Yellow"]}/>
+                        <SBTask details={["UI/UX","Ushna Karim","Yellow"]}/>
+                        <SBTask details={["Frontend","Muhammad Nameer","Yellow"]}/>
+                        
                        
                     </div>
                 </div>
@@ -49,19 +37,11 @@ function SBacklog() {
                     </h3>
                     <div className='BacklogStream'>
                       
+                    <SBTask details={["Documentation","Ushna Karim","Pink"]}/>
+                        <SBTask details={["Database","Usama Ali","Pink"]}/>
+                      
                        
-                        <div className="backlogTasks Pink">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>Review</button>
-                        </div>
-                        <div className="backlogTasks Pink">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>Review</button>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -80,25 +60,8 @@ function SBacklog() {
                     </h3>
                     <div className='BacklogStream'>
                       
+                    <SBTask details={["Documentation","Ushna Karim","Blue"]}/>
                        
-                        <div className="backlogTasks Blue">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>Approve</button>
-                        </div>
-                        <div className="backlogTasks Blue">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>Approve</button>
-                        </div>
-                        <div className="backlogTasks Blue">
-                            <p>
-                                ABCDEF
-                            </p>
-                            <button className='BtnTask'>Approve</button>
-                        </div>
                     </div>
                 </div>
 
@@ -117,7 +80,13 @@ function SBacklog() {
                       
                         <div className="backlogTasks Green">
                             <p>
-                                ABCDEF
+                                Backend
+                            </p>
+                            
+                        </div>
+                        <div className="backlogTasks Green">
+                            <p>
+                                POC
                             </p>
                             
                         </div>

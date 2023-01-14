@@ -53,6 +53,9 @@ function CreateProject() {
                     <label >Project Name</label>
                     <Form.Control type="text" />
 
+                    <label >Project Description</label>
+                    <Form.Control type="text" />
+
 
                     <label >Number of group members</label>
                     <Form.Select aria-label="Default select example">

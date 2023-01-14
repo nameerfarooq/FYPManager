@@ -1,8 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import '../Project/projects.css'
 import { useState } from "react";
+import '../Project/projects.css'
 function CreateMilestone() {
     const [Duedate, setDueDate] = useState(new Date());
     const [Defendingdate, setDefendingDate] = useState(new Date());
@@ -51,8 +51,7 @@ function CreateMilestone() {
 
 
 
-                    <label >Venue of Defending</label>
-                    <Form.Control type="text" />
+                  
 
 
                     
