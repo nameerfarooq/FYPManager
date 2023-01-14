@@ -1,13 +1,27 @@
 import './App.css';
+//eslint-disable-next-line
 import Dashboard from './Components/Dashboard/Dashboard';
+import SupervisorDashboard from './Components/SupervisorScreens/SDashboard/SupervisorDashboard';
 import HomePage from './Components/LandingPage.jsx/HomePage';
+import TDashboard from './Components/TeamMembers/Dashboard/TDashboard';
 
 function App() {
+
+  var loginStatus = true
+
   return (
     <div className="App">
-      {/* <Dashboard /> */}
-      <HomePage/>
-      
+      {
+        loginStatus  ?
+          // <Dashboard UserName={'Sir Syed Faisal Ali'} />
+          <SupervisorDashboard  UserName={'Sir Syed Faisal Ali'} />
+          // <TDashboard UserName={'Muhammad Nameer'}/>
+          :
+          <HomePage />
+      }
+
+
+
     </div>
   );
 }

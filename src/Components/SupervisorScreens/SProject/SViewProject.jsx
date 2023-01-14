@@ -3,7 +3,7 @@ import './projects.css'
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import MyVerticallyCenteredModal from './MyVerticallyCenteredModal';
-function ViewProject() {
+function SViewProject() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -65,23 +65,7 @@ function ViewProject() {
 
                 </div>
 
-                <div className='PV-Cards'>
-
-                    <h3 className='PV-cards-heading'>
-                        Supervisor
-                    </h3>
-                    <div className='PV-cards-section'>
-                    <p>
-                    Miss Amna Umair (faculty code)
-                    </p>
-                      <br />
-                      <br />
-                    </div>
-                    <Button className='PV-btn' variant="primary">
-                        Change
-                    </Button>
-                    
-                </div>
+                
                 <div className='PV-Cards'>
 
                     <h3 className='PV-cards-heading'>
@@ -98,6 +82,9 @@ function ViewProject() {
                     <Button className='PV-btn'variant="primary" >
                         Edit
                     </Button>
+                    <Button className='PV-btn m-3'variant="primary" >
+                        View
+                    </Button>
                    
                 </div>
 
@@ -113,4 +100,4 @@ function ViewProject() {
     )
 }
 
-export default ViewProject
+export default SViewProject

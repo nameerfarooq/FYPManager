@@ -1,8 +1,6 @@
-import React from 'react';
-import'./style.css'
-
-const Sidebar = () => {
-  
+import React from 'react'
+import '../../Dashboard/style.css'
+function SupervisorSidebar() {
   return (
     <aside sticky="top" className='Sidebar' >
       <h2>Dashboard</h2>
@@ -12,12 +10,12 @@ const Sidebar = () => {
         <li>Projects</li>
         <li>Milestones</li>
         <li>Notifications</li>
-        <li>Supervisors</li>
+        
     
        
       </ul>
     </aside>
-  );
+  )
 }
 
-export default Sidebar;
+export default SupervisorSidebar

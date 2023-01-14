@@ -1,10 +1,10 @@
 import React from 'react'
-import './Notifications.css'
-import '../MainStyling.css'
-import '../Project/projects.css'
-import Notification from './Notification'
+import '../SNotifications/SNotifications.css'
+import '../../../Components/MainStyling.css'
+import '../../Project/projects.css'
+import SNotification from './SNotification.jsx'
 
-function AllNotifications() {
+function SAllNotifications() {
     return (
         <div>
             <div className='ProjectHeader'>
@@ -13,7 +13,7 @@ function AllNotifications() {
             </div>
             <div className='MainContainerDiv'>
 
-                <Notification details={
+                <SNotification details={
                     {
                         title:"Project Submission Guidelines",
                         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni sequi accusantium dicta, dolore ut rerum soluta autem porro, perspiciatis numquam harum hic. Maiores nemo eum accusantium reiciendis optio atque!",
@@ -21,7 +21,7 @@ function AllNotifications() {
                         timeline: "10:45 PM, 20 Jan 2023"
                     }
                 }/>
-                <Notification details={
+                <SNotification details={
                     {
                         title:"FYP Report Submission",
                         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni sequi accusantium dicta, dolore ut rerum soluta autem porro, perspiciatis numquam harum hic. Maiores nemo eum accusantium reiciendis optio atque!",
@@ -29,7 +29,7 @@ function AllNotifications() {
                         timeline: "10:45 PM, 22 Jan 2023"
                     }
                 }/>
-                <Notification details={
+                <SNotification details={
                     {
                         title:"Deadline Extended",
                         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni sequi accusantium dicta, dolore ut rerum soluta autem porro, perspiciatis numquam harum hic. Maiores nemo eum accusantium reiciendis optio atque!",
@@ -40,8 +40,9 @@ function AllNotifications() {
 
 
             </div>
+            <br /><br /><br />
         </div>
     )
 }
 
-export default AllNotifications
+export default SAllNotifications

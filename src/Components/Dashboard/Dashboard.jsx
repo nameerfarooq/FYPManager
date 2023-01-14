@@ -1,19 +1,24 @@
 import DashboardMain from './DashboardMain';
 import Header from './Header'
 import Sidebar from './Sidebar';
-import'./style.css'
-function Dashboard() {
+import './style.css'
+function Dashboard(props) {
+  const UserName = props.UserName
   return (
-    
+
     <div className="App">
-    
-      <Header />
+
+      <Header UserName={UserName} />
+
       <div className='Dashboard-panel'>
-        <Sidebar />
-        <DashboardMain />
         
+        <Sidebar />
+
+        <DashboardMain />
+
       </div>
-    </div>
+
+    </div >
   );
 }
 

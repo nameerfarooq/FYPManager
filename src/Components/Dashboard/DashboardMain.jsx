@@ -5,6 +5,7 @@ import AllMilestones from '../Milestone/AllMilestones'
 import CreateMilestone from '../Milestone/CreateMilestone'
 // eslint-disable-next-line
 import AllNotifications from '../Notifications/AllNotifications'
+// eslint-disable-next-line
 import CreateNotification from '../Notifications/CreateNotification'
 // eslint-disable-next-line
 import ChangeSupervisor from '../Project/ChangeSupervisor'
@@ -19,54 +20,40 @@ import FinalProject from '../Project/FinalProject'
 import MainProjectScreen from '../Project/MainProjectScreen'
 // eslint-disable-next-line
 import ViewProject from '../Project/ViewProject'
+// eslint-disable-next-line
 import AddSupervisor from '../Supervisor/AddSupervisor'
+// eslint-disable-next-line
 import AllSupervisors from '../Supervisor/AllSupervisors'
 // eslint-disable-next-line
-import TeamMemberWindow from '../TeamMembers/TeamMemberWindow'
+
 import './style.css'
-function DashboardMain() {
+
+function DashboardMain(props) {
+
     return (
         <div className='DashboardMain'>
 
             {/* **************************************************************************************** */}
             {/* Main Screen for projects (view and create new)  */}
             {/* **************************************************************************************** */}
-            {/* <MainProjectScreen />   */}
-
-            {/* <CreateProject/> */}
-
+            <MainProjectScreen />
+            {/* <CreateProject/>  */}
             {/* <ViewProject/> */}
-
             {/* <FinalProject/> */}
-
             {/* <ChangeSupervisor /> */}
-
-
             {/* ********************************************************************************************* */}
             {/* create milestone window */}
             {/* ********************************************************************************************* */}
-
-
-
-
             {/* ********************************************************************************************* */}
             {/* create milestone window */}
             {/* ********************************************************************************************* */}
-
             {/* <AllMilestones/> */}
-
             {/* <CreateMilestone/> */}
-
-        {/* <EditTeamMembers/> */}
-
-{/* <AllNotifications/> */}
-
-{/* <CreateNotification/> */}
-
-
-{/* <AllSupervisors/> */}
-
-{/* <AddSupervisor/> */}
+            {/* <EditTeamMembers/> */}
+            {/* <AllNotifications/> */}
+            {/* <CreateNotification/> */}
+            {/* <AllSupervisors/> */}
+            {/* <AddSupervisor/> */}
 
         </div>
     )

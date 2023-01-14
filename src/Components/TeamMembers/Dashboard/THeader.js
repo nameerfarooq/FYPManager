@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import './style.css'
-function Header(props) {
+import './Tstyle.css'
+function THeader(props) {
   const UserName = props.UserName
   return (
     <Navbar sticky="top" className='Navbar-out '>
@@ -13,7 +13,7 @@ function Header(props) {
             <a href="#login" className='Navbar-in' >Hello, {UserName}</a>
             <button className='btnLogout' title='logout'>
 
-              <img className='w-100' src={require('../../Images/logout.png')} alt="" />
+              <img className='w-100' src={require('../../../Images/logout.png')} alt="" />
 
             </button>
           </Navbar.Text>
@@ -23,4 +23,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default THeader;
