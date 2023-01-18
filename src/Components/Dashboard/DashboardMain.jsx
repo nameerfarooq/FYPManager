@@ -37,10 +37,11 @@ function DashboardMain(props) {
             {/* Main Screen for projects (view and create new)  */}
             {/* **************************************************************************************** */}
             {/* <MainProjectScreen /> */}
-            {/* <CreateProject/>  */}
+            <CreateProject/> 
             {/* <ViewProject/> */}
             {/* <FinalProject/> */}
             {/* <ChangeSupervisor /> */}
+            {/* <EditTeamMembers/> */}
             {/* ********************************************************************************************* */}
             {/* create milestone window */}
             {/* ********************************************************************************************* */}
@@ -48,8 +49,7 @@ function DashboardMain(props) {
             {/* create milestone window */}
             {/* ********************************************************************************************* */}
             {/* <AllMilestones/> */}
-            <CreateMilestone/>
-            {/* <EditTeamMembers/> */}
+            {/* <CreateMilestone/> */}
             {/* <AllNotifications/> */}
             {/* <CreateNotification/> */}
             {/* <AllSupervisors/> */}

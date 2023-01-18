@@ -9,14 +9,15 @@ function Header(props) {
         <Navbar.Brand className='Navbar-in' href="#home">FYPManager</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
+            {UserName && <Navbar.Text>
             <a href="#login" className='Navbar-in' >Hello, {UserName}</a>
             <button className='btnLogout' title='logout'>
 
               <img className='w-100' src={require('../../Images/logout.png')} alt="" />
 
             </button>
-          </Navbar.Text>
+          </Navbar.Text>}
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

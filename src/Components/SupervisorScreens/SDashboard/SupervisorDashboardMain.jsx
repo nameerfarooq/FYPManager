@@ -18,14 +18,14 @@ function SupervisorDashboardMain() {
       {/* <SMainProjectScreen/> */}
       {/* <SViewProject/> */}
       {/* <SFinalProject/> */}
+      {/* <SViewTeamMember/> */}
       {/* <SEditTeamMembers/> */}
       {/* <SAllMilestones/> */}
       {/* <Allsprints/> */}
-      <CreateSprint/>
+      {/* <CreateSprint/>/ */}
       {/* <SAllNotifications/> */}
       {/* <SCreateNotification/> */}
-      {/* <SViewTeamMember/> */}
-      {/* <SBacklog /> */}
+      <SBacklog />
 
 
 

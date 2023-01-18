@@ -1,10 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
 
 
 function CreateProject() {
+    const [Batch, setBatch] = useState("")
+    const [Program, setProgram] = useState("")
+    const [ProjectName, setProjectName] = useState("")
+    const [ProjectDescription, setProjectDescription] = useState("")
+    const [NoGroupMembers, setNoGroupMembers] = useState("")
+    const [ProjectType, setProjectType] = useState("")
+    const [Supervisor, setSupervisor] = useState("")
+
+    const item = {
+        "Batch": Batch,
+        "Program": Program,
+        "ProjectName": ProjectName,
+        "ProjectDescription": ProjectDescription,
+        "NoGroupMembers": NoGroupMembers,
+        "ProjectType": ProjectType,
+        "Supervisor": Supervisor
+    }
+
+    function Submit(e) {
+        e.preventDefault()
+        console.log("All fields", item)
+    }
+    function ClearForm(e) {
+        e.preventDefault()
+        setBatch("")
+        setProgram("")
+        setProjectName("")
+        setProjectDescription("")
+        setNoGroupMembers("")
+        setProjectType("")
+        setSupervisor("")
+
+    }
     return (
         <div className='CreateProjectScreen'>
 
@@ -19,31 +52,31 @@ function CreateProject() {
                 <Form>
 
                     <label >Batch</label>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select value={Batch} onChange={(e) => setBatch(e.target.value)} aria-label="Default select example">
                         <option>select</option>
-                        <option value="1">19b</option>
-                        <option value="2">18b</option>
-                        <option value="4">17b</option>
-                        <option value="5">16b</option>
-                        <option value="6">15b</option>
-                        <option value="7">14b</option>
-                        <option value="8">13b</option>
-                        <option value="9">12b</option>
-                        <option value="10">11b</option>
-                        <option value="11">10b</option>
+                        <option value="19b">19b</option>
+                        <option value="18b">18b</option>
+                        <option value="17b">17b</option>
+                        <option value="16b">16b</option>
+                        <option value="15b">15b</option>
+                        <option value="14b">14b</option>
+                        <option value="13b">13b</option>
+                        <option value="12b">12b</option>
+                        <option value="11b">11b</option>
+                        <option value="10b">10b</option>
                     </Form.Select>
 
 
 
                     <label >Program</label>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select value={Program} onChange={(e) => setProgram(e.target.value)} aria-label="Default select example">
                         <option>select</option>
-                        <option value="1">Computer Science</option>
-                        <option value="2">Software Engineering</option>
-                        <option value="3">Electrical Engineering</option>
-                        <option value="4">Power Engineering</option>
-                        <option value="5">Electronics Engineering</option>
-                        <option value="6">Computer Engineering</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        <option value="Power Engineering">Power Engineering</option>
+                        <option value="Electronics Engineering">Electronics Engineering</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
 
                     </Form.Select>
 
@@ -51,14 +84,14 @@ function CreateProject() {
 
 
                     <label >Project Name</label>
-                    <Form.Control type="text" />
+                    <Form.Control value={ProjectName} onChange={(e) => setProjectName(e.target.value)} type="text" />
 
                     <label >Project Description</label>
-                    <Form.Control type="text" />
+                    <Form.Control value={ProjectDescription} onChange={(e) => setProjectDescription(e.target.value)} type="text" />
 
 
                     <label >Number of group members</label>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select value={NoGroupMembers} onChange={(e) => setNoGroupMembers(e.target.value)} aria-label="Default select example">
                         <option>select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -72,19 +105,19 @@ function CreateProject() {
 
 
                     <label >Project type</label>
-                    <Form.Control type="text" />
+                    <Form.Control value={ProjectType} onChange={(e) => setProjectType(e.target.value)} type="text" />
 
 
 
 
                     <label >Assign Supervisor</label>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select value={Supervisor} onChange={(e) => setSupervisor(e.target.value)} aria-label="Default select example">
                         <option>select</option>
-                        <option value="1">Miss Amna Umair</option>
-                        <option value="2">Sir Dr. Waseem</option>
-                        <option value="3">Sir Syed Faisal Ali</option>
-                        <option value="4">Sir Zeeshan Saleem Khan</option>
-                        <option value="5">Sir Dr.Lubaid</option>
+                        <option value="Miss Amna Umair">Miss Amna Umair</option>
+                        <option value="Sir Dr. Waseem">Sir Dr. Waseem</option>
+                        <option value="Sir Syed Faisal Ali">Sir Syed Faisal Ali</option>
+                        <option value="Sir Zeeshan Saleem Khan">Sir Zeeshan Saleem Khan</option>
+                        <option value="Sir Dr.Lubaid">Sir Dr.Lubaid</option>
 
 
                     </Form.Select>
@@ -95,10 +128,10 @@ function CreateProject() {
 
 
                     <div className='PC-btnHolder'>
-                        <Button className='PC-btn1' variant="secondary" type="submit">
+                        <Button onClick={ClearForm} className='PC-btn1' variant="secondary" type="submit">
                             Cancel
                         </Button>
-                        <Button className='PC-btn2' variant="primary" type="submit">
+                        <Button onClick={Submit} className='PC-btn2' variant="primary" type="submit">
                             Create Project
                         </Button>
                     </div>

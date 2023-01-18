@@ -4,6 +4,7 @@ import TSidebar from './TSidebar';
 import './Tstyle.css'
 function TDashboard(props) {
   const UserName = props.UserName
+  const UserRole = props.UserRole
   return (
 
     <div className="App">
@@ -14,7 +15,7 @@ function TDashboard(props) {
         
         <TSidebar />
 
-        <TDashboardMain />
+        <TDashboardMain UserRole={UserRole}/>
 
       </div>
 

@@ -4,6 +4,8 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import SupervisorDashboard from './Components/SupervisorScreens/SDashboard/SupervisorDashboard';
 import HomePage from './Components/LandingPage.jsx/HomePage';
 import TDashboard from './Components/TeamMembers/Dashboard/TDashboard';
+import Signup from './Components/LoginSignup/Signup';
+import Loginpage from './Components/LoginSignup/Loginpage';
 
 function App() {
 
@@ -13,9 +15,11 @@ function App() {
     <div className="App">
       {
         loginStatus  ?
-          // <Dashboard UserName={'Sir Syed Faisal Ali'} />
-          <SupervisorDashboard  UserName={'Sir Syed Faisal Ali'} />
-          // <TDashboard UserName={'Muhammad Nameer'}/>
+          <Dashboard UserRole={'FYPCoordinator'} UserName={'Sir Syed Faisal Ali'} />
+          // <SupervisorDashboard UserRole={'Supervisor'} UserName={'Sir Syed Faisal Ali'} />
+          // <TDashboard UserRole={'TeamMember'} UserName={'Muhammad Nameer'}/>
+          // <Signup/>
+          // <Loginpage/>
           :
           <HomePage />
       }

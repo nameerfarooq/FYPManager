@@ -11,7 +11,7 @@ function HomePage() {
 
             <Navbar sticky='top' className=' NavbarHome'>
                 <Container>
-                    <Navbar.Brand className='WhiteTxt Heading' href="#home">FYPManager</Navbar.Brand>
+                    <Navbar.Brand className='WhiteTxt' href="#home">FYPManager</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <button className='LoginButton'>
