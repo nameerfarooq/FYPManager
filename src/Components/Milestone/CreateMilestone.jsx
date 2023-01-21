@@ -3,10 +3,44 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
 import '../Project/projects.css'
+import axios from 'axios';
 function CreateMilestone() {
     const [Duedate, setDueDate] = useState(new Date());
     const [Defendingdate, setDefendingDate] = useState(new Date());
+    const [MilestoneName, setMilestoneName] = useState("")
+    const [MilestoneDetails, setMilestoneDetails] = useState("")
+    const [FYPpanel, setFYPpanel] = useState("")
 
+    function ClearForm(e) {
+        e.preventDefault()
+        setDueDate(new Date())
+        setDefendingDate(new Date())
+        setMilestoneName("")
+        setMilestoneDetails("")
+        setFYPpanel("")
+
+    }
+    async function SubmitForm(e) {
+        e.preventDefault()
+        const item = {
+            "milestone_name": MilestoneName,
+            "document_submission_date": Duedate,
+            "milestone_defending_date": Defendingdate,
+            "milestone_details": MilestoneDetails,
+            "fyp_panel": FYPpanel
+
+        }
+
+        const response = await axios.post("http://127.0.0.1:8000/milestone", item)
+            .then(res => {
+                console.log("res is equal to : ",res)
+            }
+            )
+            .catch(err => {
+                console.log("err is equal to : ",err)
+            }
+            )
+    }
     return (
 
         <div className='CreateProjectScreen'>
@@ -22,7 +56,7 @@ function CreateMilestone() {
                 <Form>
 
                     <label >Milestone Name</label>
-                    <Form.Control type="text" />
+                    <Form.Control value={MilestoneName} onChange={(e) => setMilestoneName(e.target.value)} type="text" />
 
                     <label >Document Submission Date</label>
                     <Form.Group controlId="duedate">
@@ -46,37 +80,19 @@ function CreateMilestone() {
                     </Form.Group>
 
 
-
-
-
-
-
-                  
-
-
-                    
-
-
-
-
                     <label >Milestone Details</label>
-                    <Form.Control type="text" className='CM-Des'/>
+                    <Form.Control value={MilestoneDetails} onChange={(e) => setMilestoneDetails(e.target.value)} type="text" className='CM-Des' />
 
 
-
-
-                   
-
-
-
-
+                    <label >FYP Panel</label>
+                    <Form.Control value={FYPpanel} onChange={(e) => setFYPpanel(e.target.value)} type="text" className='CM-Des' />
 
 
                     <div className='PC-btnHolder'>
-                        <Button className='PC-btn1' variant="secondary" type="submit">
+                        <Button onClick={ClearForm} className='PC-btn1' variant="secondary" type="submit">
                             Cancel
                         </Button>
-                        <Button className='PC-btn2' variant="primary" type="submit">
+                        <Button onClick={SubmitForm} className='PC-btn2' variant="primary" type="submit">
                             Create Milestone
                         </Button>
                     </div>

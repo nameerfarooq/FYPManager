@@ -19,14 +19,25 @@ function Loginpage() {
     e.preventDefault()
     const response = await axios.post("http://127.0.0.1:8000/login", item)
 
-      .then(res => console.log("posting data :", res)
-        ,
-        alert("login Succes")
+      .then(res => {
+        console.log(res.data.message)
+        if (res.data.message === "Login Succes") {
+          alert(res.data.message)
+        }
+        else{
+          alert("Username or password is wrong")
+
+        }
+        ;
+      }
+
       )
-      .catch(err => console.log("error found :", err)
-        ,
-        alert("Username or password is wrong")
-      )
+      .catch(err => {
+        if (err.data.message === "login fail") {
+          alert("Username or password is wrong")
+        };
+        // alert("Username or password is wrong")
+      })
 
   }
 

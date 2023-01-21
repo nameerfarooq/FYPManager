@@ -37,7 +37,7 @@ function DashboardMain(props) {
             {/* Main Screen for projects (view and create new)  */}
             {/* **************************************************************************************** */}
             {/* <MainProjectScreen /> */}
-            <CreateProject/> 
+            {/* <CreateProject/>  */}
             {/* <ViewProject/> */}
             {/* <FinalProject/> */}
             {/* <ChangeSupervisor /> */}
@@ -49,7 +49,7 @@ function DashboardMain(props) {
             {/* create milestone window */}
             {/* ********************************************************************************************* */}
             {/* <AllMilestones/> */}
-            {/* <CreateMilestone/> */}
+            <CreateMilestone/>
             {/* <AllNotifications/> */}
             {/* <CreateNotification/> */}
             {/* <AllSupervisors/> */}

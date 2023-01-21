@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 
@@ -14,18 +15,43 @@ function CreateProject() {
     const [Supervisor, setSupervisor] = useState("")
 
     const item = {
-        "Batch": Batch,
-        "Program": Program,
-        "ProjectName": ProjectName,
-        "ProjectDescription": ProjectDescription,
-        "NoGroupMembers": NoGroupMembers,
-        "ProjectType": ProjectType,
-        "Supervisor": Supervisor
+        "title": ProjectName,
+        "batch": Batch,
+        "description": ProjectDescription,
+        "domain": ProjectType,
+        "supervisor": Supervisor,
+        "department": Program,
+        // "NoGroupMembers": NoGroupMembers,
     }
 
-    function Submit(e) {
+    async function Submit(e) {
         e.preventDefault()
         console.log("All fields", item)
+
+        // API integration
+
+        const response = await axios.post("http://127.0.0.1:8000/project", item)
+
+        .then(res => {
+          console.log(res)
+          if (res.data.message === "Success") {
+            alert(res.data.message)
+          }
+          else{
+            alert("Error agaya bhai")
+  
+          }
+          ;
+        }
+  
+        )
+        .catch(err => {
+          if (err.data.message === "login fail") {
+            alert("Username or password is wrong")
+          };
+          // alert("Username or password is wrong")
+        })
+
     }
     function ClearForm(e) {
         e.preventDefault()
@@ -52,7 +78,7 @@ function CreateProject() {
                 <Form>
 
                     <label >Batch</label>
-                    <Form.Select value={Batch} onChange={(e) => setBatch(e.target.value)} aria-label="Default select example">
+                    <Form.Select required value={Batch} onChange={(e) => setBatch(e.target.value)} aria-label="Default select example">
                         <option>select</option>
                         <option value="19b">19b</option>
                         <option value="18b">18b</option>
@@ -69,14 +95,14 @@ function CreateProject() {
 
 
                     <label >Program</label>
-                    <Form.Select value={Program} onChange={(e) => setProgram(e.target.value)} aria-label="Default select example">
+                    <Form.Select required value={Program} onChange={(e) => setProgram(e.target.value)} aria-label="Default select example">
                         <option>select</option>
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Software Engineering">Software Engineering</option>
-                        <option value="Electrical Engineering">Electrical Engineering</option>
-                        <option value="Power Engineering">Power Engineering</option>
-                        <option value="Electronics Engineering">Electronics Engineering</option>
-                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="1">Computer Science</option>
+                        <option value="2">Software Engineering</option>
+                        <option value="3">Electrical Engineering</option>
+                        <option value="4">Power Engineering</option>
+                        <option value="5">Electronics Engineering</option>
+                        <option value="6">Computer Engineering</option>
 
                     </Form.Select>
 
@@ -84,14 +110,14 @@ function CreateProject() {
 
 
                     <label >Project Name</label>
-                    <Form.Control value={ProjectName} onChange={(e) => setProjectName(e.target.value)} type="text" />
+                    <Form.Control required value={ProjectName} onChange={(e) => setProjectName(e.target.value)} type="text" />
 
                     <label >Project Description</label>
-                    <Form.Control value={ProjectDescription} onChange={(e) => setProjectDescription(e.target.value)} type="text" />
+                    <Form.Control required value={ProjectDescription} onChange={(e) => setProjectDescription(e.target.value)} type="text" />
 
 
                     <label >Number of group members</label>
-                    <Form.Select value={NoGroupMembers} onChange={(e) => setNoGroupMembers(e.target.value)} aria-label="Default select example">
+                    <Form.Select required value={NoGroupMembers} onChange={(e) => setNoGroupMembers(e.target.value)} aria-label="Default select example">
                         <option>select</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -105,19 +131,19 @@ function CreateProject() {
 
 
                     <label >Project type</label>
-                    <Form.Control value={ProjectType} onChange={(e) => setProjectType(e.target.value)} type="text" />
+                    <Form.Control required value={ProjectType} onChange={(e) => setProjectType(e.target.value)} type="text" />
 
 
 
 
                     <label >Assign Supervisor</label>
-                    <Form.Select value={Supervisor} onChange={(e) => setSupervisor(e.target.value)} aria-label="Default select example">
+                    <Form.Select required value={Supervisor} onChange={(e) => setSupervisor(e.target.value)} aria-label="Default select example">
                         <option>select</option>
-                        <option value="Miss Amna Umair">Miss Amna Umair</option>
-                        <option value="Sir Dr. Waseem">Sir Dr. Waseem</option>
-                        <option value="Sir Syed Faisal Ali">Sir Syed Faisal Ali</option>
-                        <option value="Sir Zeeshan Saleem Khan">Sir Zeeshan Saleem Khan</option>
-                        <option value="Sir Dr.Lubaid">Sir Dr.Lubaid</option>
+                        <option value="1">Miss Amna Umair</option>
+                        <option value="2">Sir Dr. Waseem</option>
+                        <option value="3">Sir Syed Faisal Ali</option>
+                        <option value="4">Sir Zeeshan Saleem Khan</option>
+                        <option value="5">Sir Dr.Lubaid</option>
 
 
                     </Form.Select>
